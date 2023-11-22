@@ -35,9 +35,7 @@ def index():
 		country = form.country.data 
 		message = form.message.data 
 		photo = form.photo.data.filename 
-		return f'Name: {name} < br > Password: {generate_password_hash(password)} 
-		<br > Remember me: {remember_me} < br > Salary: {salary} < br > Gender: {gender} 
-		<br > Country: {country} < br > Message: {message} < br > Photo: {photo}' 
+		return f'Name: {name} < br > Password: {generate_password_hash(password)} <br > Remember me: {remember_me} < br > Salary: {salary} < br > Gender: {gender} <br > Country: {country} < br > Message: {message} < br > Photo: {photo}' 
 	return render_template('index.html', form=form) 
 
 
