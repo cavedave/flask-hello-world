@@ -5,10 +5,12 @@ from wtforms import StringField, PasswordField, BooleanField
 from wtforms import DecimalField, RadioField, SelectField, TextAreaField, FileField 
 from wtforms.validators import InputRequired 
 from werkzeug.security import generate_password_hash 
+import os
+
 
 app = Flask(__name__) 
-app.config['SECRET_KEY'] = 'secretkey'
-
+# app.config['SECRET_KEY'] = 'secretkey'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 class MyForm(FlaskForm): 
 	name = StringField('Name', validators=[InputRequired()]) 
