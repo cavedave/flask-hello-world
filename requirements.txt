@@ -1,2 +1,6 @@
 Flask
 Gunicorn
+flask_wtf
+wtforms
+werkzeug
+wtforms.validators
